@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 //initiate R6Stats API
 const R6StatsAPI = require('r6statsapi').default;
-const R6Stats = new R6StatsAPI('ea39cffc-3653-4e44-9c75-25421b4a2a7d');
+const R6Stats = new R6StatsAPI('');
 //R6Stats argument list
 let statsArray = ["assists", "barricades_deployed", "blind_kills", "bullets_fired", "bullets_hit", "dbnos", "deaths", "distance_travelled",
 "draws", "gadgets_destroyed", "games_played", "headshots", "kd", "kills", "losses", "melee_kills", "penetration_kills", "playtime", "rappel_breeches",
@@ -21,7 +21,7 @@ client.on('ready', () => {
             console.log(` -  ${channel.name} ${channel.type} ${channel.id} `);
         });
     });
-    let generalChannel = client.channels.get("637635201408958478");
+    let generalChannel = client.channels.get("");
     const attatchment = new Discord.Attachment("https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG");
     generalChannel.send(attatchment);
 });
@@ -101,4 +101,4 @@ function helpCommand(comArguments, receivedMessage) {
     }
 }
 
-client.login('NjM3NjM1NTUzNjI5ODMxMTg5.XbRCcw.PhPzRKwb_OCnzar0GFOvWkNOjcE');
+client.login('');
